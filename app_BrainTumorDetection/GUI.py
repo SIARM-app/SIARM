@@ -14,6 +14,14 @@ class MyGui:
 
         self.root = tk.Tk()
         self.root.geometry("900x600")
+        # Centra la ventana en la pantalla
+        self.root.update_idletasks()
+        width = self.root.winfo_width()
+        height = self.root.winfo_height()
+        x = (self.root.winfo_screenwidth() // 2) - (width // 2)
+        y = (self.root.winfo_screenheight() // 2) - (height // 2)
+        self.root.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+
         notebook = ttk.Notebook(self.root, width=900, height=600)
         notebook.pack(side=LEFT, fill=BOTH, expand=True)
 
@@ -33,7 +41,12 @@ class MyGui:
         self.load_button = Button(self.page1, text="Cargar imagen")
         self.load_button.pack(side=BOTTOM, padx=50, pady=20)
 
-        image = Image.open("C:\Users\chris\OneDrive\Imágenes\PXL_20230202_033715658.PORTRAIT.jpg")
+        self.img_label = Label(self.page1)
+        self.img_label.pack(side=TOP, padx=55, pady=100)
+
+
+
+        image = Image.open("./Images/Hugod.jpeg")
         # Escalar la imagen al tamaño deseado
         image = image.resize((400, 400), Image.LANCZOS)
         # Convertir la imagen a un objeto compatible con tkinter
