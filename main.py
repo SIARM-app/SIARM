@@ -106,7 +106,7 @@ print("Area CEREBRO: ",Area_CEREBRO )
 
 # Area de Cerebro --100%
 # Area de Tumor ----x
-print("\nEl porcentaje del cerebro que se dectó como tumor es: ", round(Area_tumor *100 / Area_CEREBRO), " %")
+print("\nEl porcentaje del cerebro que se dectó como tumor es: ", round((Area_tumor *100 / Area_CEREBRO),2), " %")
 
 
 # Convertir la imagen de nuevo a formato PIL
