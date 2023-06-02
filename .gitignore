@@ -1,0 +1,7 @@
+
+app_BrainTumorDetection/Modelos/best (3) v8.pt
+app_BrainTumorDetection/Modelos/BRAIN_yoloV5.pt
+app_BrainTumorDetection/Modelos/modeloyolov5-full.pt
+app_BrainTumorDetection/Modelos/yolov8-full.pt
+app_BrainTumorDetection/Modelos/yolov8-full_float16.tflite
+app_BrainTumorDetection/Modelos/yolov8x (1).pt
