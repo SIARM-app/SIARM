@@ -51,6 +51,8 @@ def check_Image():
         gui.brainPercen_result_scale.config(text= "Estado del Cerebro: Leve")
     elif brainPercen > 10 and brainPercen <= 20:
         gui.brainPercen_result_scale.config(text= "Estado del Cerebro: Moderado")
+    elif brainPercen == 0:
+        gui.brainPercen_result_scale.config(text="No hay tumor en el cerebro.")
     else:
         gui.brainPercen_result_scale.config(text= "Estado del Cerebro: Grave")
 
