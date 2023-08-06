@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import filedialog, messagebox
 from tkinter import ttk
 from PIL import ImageTk, Image
-from Gui import *
+from GUI import *
 from Model import *
 
 
@@ -47,7 +47,7 @@ def check_Image():
     gui.AreaC_result.config(text="Area del cerebro: " + str(AreaC))
     gui.brainPercen_result.config(text= "El porcentaje del cerebro que se dectó como tumor es: " + str(brainPercen) + "%")
 
-    if brainPercen >= 0 and brainPercen <= 10:
+    if brainPercen > 0 and brainPercen <= 10:
         gui.brainPercen_result_scale.config(text= "Estado del Cerebro: Leve")
     elif brainPercen > 10 and brainPercen <= 20:
         gui.brainPercen_result_scale.config(text= "Estado del Cerebro: Moderado")
